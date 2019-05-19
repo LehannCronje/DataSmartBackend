@@ -1,0 +1,92 @@
+<div class="side-dash-wrapper">
+    <div class="side-dash">
+        <div class="side-dash-header">
+            <h1>Dashboard</h1>
+            <hr>
+        </div>
+        <div class="side-dash-body">
+            <ul>
+                <li>Dashboard</li>
+                <li>Icons</li>
+                <li>Maps</li>
+                <li>Notifications</li>
+            </ul>
+        </div>    
+    </div>
+</div>
+<div class="main-board">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="top-graph col-12">
+                <div>
+                    <h1>Top graph</h1>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="middle-graph graph-left col-4">
+                <h1>Middle left</h1>
+                <canvas id="myChart1"></canvas>
+            </div>
+            <div class="middle-graph graph-center col-4">
+                <h1>Middle centre</h1>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="middle-graph graph-right col-4">
+                <h1>Middle right</h1>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="bottom-graph graph-right col-6">
+                <h1>bottom graph left</h1>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="bottom-graph graph-left col-6">
+                <h1>bottom graph right</h1>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let myChart = document.getElementById('myChart').getContext("2d");
+
+    let massPopChart = new Chart(myChart, {
+        type:'bar',
+        data:{
+            labels:['Boston','Worcester','Springdield', 'Lowel', 'Cambridge'],
+            datasets:[{
+                label:'Population',
+                data:[
+                    617594,
+                    181045,
+                    153060,
+                    106519,
+                    105162,
+                    95075
+                ]
+            }]
+        },
+        options:{}
+
+    });
+    let myChart1 = document.getElementById('myChart1').getContext("2d");
+
+    let massPopChart1 = new Chart(myChart1, {
+        type:'bar',
+        data:{
+            labels:['Boston','Worcester','Springdield', 'Lowel', 'Cambridge'],
+            datasets:[{
+                label:'Population',
+                data:[
+                    617594,
+                    181045,
+                    153060,
+                    106519,
+                    105162,
+                    95075
+                ]
+            }]
+        },
+        options:{}
+
+    });
+</script>
